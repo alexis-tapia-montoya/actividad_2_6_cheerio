@@ -6,7 +6,7 @@ async function getScrapedData(req, res) {
     if (!url) {
         return res.status(400).json({
             status: 'error',
-            message: 'Falta el parámetro requerido "url" en la query de la petición.'
+            message: 'falta el parametro requerido "url" en la query de la peticion.'
         });
     }
 
@@ -15,7 +15,7 @@ async function getScrapedData(req, res) {
     } catch (urlError) {
         return res.status(400).json({
             status: 'error',
-            message: 'La URL proporcionada no tiene un formato válido (ejemplo: https://news.ycombinator.com).'
+            message: 'la URL proporcionada no tiene un formato valido (ejemplo: https://news.ycombinator.com).'
         });
     }
 
@@ -31,7 +31,7 @@ async function getScrapedData(req, res) {
     } catch (error) {
         return res.status(500).json({
             status: 'error',
-            message: error.message || 'Ocurrió un error interno al procesar el scraping.'
+            message: error.message || 'ocurrio un error interno al procesar el scraping.'
         });
     }
 }

@@ -13,8 +13,6 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`===================================================`);
     console.log(` Servidor Backend Express + Cheerio Iniciado`);
     console.log(` Probando Endpoint en: http://localhost:${PORT}/api/v1/scrape `);
-    console.log(`===================================================`);
 });

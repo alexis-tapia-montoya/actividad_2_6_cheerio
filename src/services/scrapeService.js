@@ -6,7 +6,7 @@ async function scrapeWebsiteService(url) {
     const html = response.data;
 
        if (!html || html.trim() === '') {
-        throw new Error('El contenido HTML de la URL está vacío.');
+        throw new Error('el contenido HTML de la URL está vacio.');
     }
 
         const $ = cheerio.load(html);
@@ -31,7 +31,7 @@ async function scrapeWebsiteService(url) {
     });
 
         if (resultados.length === 0) {
-        throw new Error('No se encontraron elementos con los selectores CSS definidos en esta página.');
+        throw new Error('no se encontraron elementos con los selectores CSS definidos en esta pagina.');
     }
 
     return resultados;
